@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.product-image {
+  width: 100%; /* Full width of the parent container */
+  max-width: 300px; /* Maximum width, adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center align the image */
+  display: block; /* Makes the image a block element */
+}
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust the space between cards */
+  padding: 20px; /* Padding around the container */
+}
+
+.product-card {
+  flex: 1;
+  min-width: 300px; /* Minimum width of each card, adjust as needed */
+  max-width: 400px; /* Maximum width of each card, adjust as needed */
+  border: '1px solid #ddd'; 
+  padding: '10px';
+   margin: '10px'
+}
+
