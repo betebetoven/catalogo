@@ -43,6 +43,8 @@
   height: auto; /* Maintain aspect ratio */
   margin: 0 auto; /* Center align the image */
   display: block; /* Makes the image a block element */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .products-container {
   display: flex;
@@ -60,4 +62,132 @@
   padding: '10px';
    margin: '10px'
 }
+/*******************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
 
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+.apps-card {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: calc(100%);
+  background-color: rgba(110, 113, 116, 0.2);
+  border-radius: 20px;
+}
+
+
+
+
+
+
+/* Buttons */
+.content-button {
+  background-color: rgba(0, 103, 225); /* Blue background */
+  border: none;
+  padding: 8px 26px;
+  color: white; /* White text for contrast */
+  border-radius: 20px;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.status-button {
+  margin-top: 15px;
+  padding: 12px 100px;
+  align-self: center;
+}
+
+@media screen and (max-width: 390px) {
+  .status-button {
+    padding: 6px 14px;
+  }
+}
+
+.status-button.open {
+  background: rgba(0, 103, 225); /* Blue background */
+  color: white; /* White text for contrast */
+  border: 1px solid rgba(231, 229, 229, 0.46);
+}
+
+.content-button:hover {
+  background-color: rgba(231, 229, 229); /* Lighter color on hover */
+  color: rgba(0, 0, 0); /* Black text on hover for contrast */
+}
+
+.content-button.status-button:not(:disabled):hover {
+  background-color: rgba(231, 229, 229); /* Lighter color on hover */
+  color: rgba(0, 0, 0); /* Black text on hover for contrast */
+}
+
+
+.nav-link {
+  color: #000000;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) { /* Change as per your requirement */
+  .container {
+    flex-direction: column; /* Stack MainNav and AuthNav */
+    
+  }
+ 
+
+}
+
+/*product*/
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Product title and meta information */
+.product-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.5em;
+}
+
+.product-meta {
+  margin-bottom: 1em;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Select dropdown styles */
+.product-select {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+/* Additional global styles for consistency */
+select, button {
+  width: 100%; /* Full width elements */
+}
+
+/* Clear default styles */
+option, button {
+  background: none;
+  border: none;
+}

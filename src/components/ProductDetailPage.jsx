@@ -46,28 +46,30 @@ function ProductDetailPage() {
   }
 
   return (
-    <div>
+    <div className="product-details">
       <img src={product.pic} alt={product.nombre} className="product-image" />
-      <h2>{product.nombre}</h2>
-      <p>Category: {product.categoria}</p>
-      <p>Price: ${product.precio}</p>
-      <p>Description: {product.description}</p>
+      <div className="product-info">
+        <h2 className="product-title">{product.nombre}</h2>
+        <p className="product-meta">Category: {product.categoria}</p>
+        <p className="product-meta">Price: ${product.precio}</p>
+        <p className="product-meta">Description: {product.description}</p>
 
-      <p>Choose Size:</p>
-      <select value={selectedSize} onChange={handleSizeChange}>
-        {product.size.map((size) => (
-          <option key={size} value={size}>{size}</option>
-        ))}
-      </select>
+        <label htmlFor="size-select" className="product-meta">Choose Size:</label>
+        <select id="size-select" className="product-select" value={selectedSize} onChange={handleSizeChange}>
+          {product.size.map((size) => (
+            <option key={size} value={size}>{size}</option>
+          ))}
+        </select>
 
-      <p>Choose Color:</p>
-      <select value={selectedColor} onChange={handleColorChange}>
-        {product.color.map((color) => (
-          <option key={color} value={color}>{color}</option>
-        ))}
-      </select>
+        <label htmlFor="color-select" className="product-meta">Choose Color:</label>
+        <select id="color-select" className="product-select" value={selectedColor} onChange={handleColorChange}>
+          {product.color.map((color) => (
+            <option key={color} value={color}>{color}</option>
+          ))}
+        </select>
 
-      <Makepurchase text={formatProductDetailsForWhatsApp(product, selectedSize, selectedColor)} />
+        <Makepurchase text={formatProductDetailsForWhatsApp(product, selectedSize, selectedColor)} />
+      </div>
     </div>
   );
 }

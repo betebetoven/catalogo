@@ -14,7 +14,7 @@ const Makepurchase = ({ text }) => {
 
     return (
         
-            <button onClick={openWhatsApp}>
+            <button className='content-button status-button open' onClick={openWhatsApp}>
                 Hacer pedido
             </button>
         
