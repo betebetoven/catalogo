@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import firestore from '../firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import Makepurchase from '../pedido/makepurchase';
+import AddToCartButton from './AddToCartButton';
 
 function ProductDetailPage() {
   const [product, setProduct] = useState(null);
@@ -55,20 +56,23 @@ function ProductDetailPage() {
         <p className="product-meta">Description: {product.description}</p>
 
         <label htmlFor="size-select" className="product-meta">Choose Size:</label>
-        <select id="size-select" className="product-select" value={selectedSize} onChange={handleSizeChange}>
-          {product.size.map((size) => (
-            <option key={size} value={size}>{size}</option>
-          ))}
-        </select>
+<select id="size-select" className="product-select" value={selectedSize} onChange={handleSizeChange}>
+  <option disabled value="">{selectedSize ? selectedSize : "Select Size"}</option>
+  {product.size.map((size) => (
+    <option key={size} value={size}>{size}</option>
+  ))}
+</select>
 
-        <label htmlFor="color-select" className="product-meta">Choose Color:</label>
-        <select id="color-select" className="product-select" value={selectedColor} onChange={handleColorChange}>
-          {product.color.map((color) => (
-            <option key={color} value={color}>{color}</option>
-          ))}
-        </select>
+<label htmlFor="color-select" className="product-meta">Choose Color:</label>
+<select id="color-select" className="product-select" value={selectedColor} onChange={handleColorChange}>
+  <option disabled value="">{selectedColor ? selectedColor : "Select Color"}</option>
+  {product.color.map((color) => (
+    <option key={color} value={color}>{color}</option>
+  ))}
+</select>
 
         <Makepurchase text={formatProductDetailsForWhatsApp(product, selectedSize, selectedColor)} />
+        <AddToCartButton productId={product.id} size={selectedSize} color={selectedColor} />
       </div>
     </div>
   );

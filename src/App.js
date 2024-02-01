@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ProductDetailPage from './components/ProductDetailPage';
 import NavigationMenu from './components/NavigationMenu';
+import Carrito from './components/Carrito';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:productId" element={<ProductDetailPage />} />
+        <Route path="/carrito" element={<Carrito />} />
         {/* Add more routes as needed */}
       </Routes>
       <Footer />

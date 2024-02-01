@@ -22,6 +22,9 @@ function NavigationMenu() {
           <Link to="/womens-clothing" className="menu-item" onClick={toggleMenu}>
             Women's Clothing
           </Link>
+          <Link to="/carrito" className="menu-item" onClick={toggleMenu}>
+            Carrito
+            </Link>
           {/* Add additional menu items as needed */}
         </div>
       )}

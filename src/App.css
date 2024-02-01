@@ -237,3 +237,65 @@ option, button {
 .menu-item:hover {
   background-color: #f5f5f5;
 }
+
+
+/* Cart styles */
+.carrito-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.carrito-container h2 {
+  font-size: 2rem;
+  color: #111;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.cart-item-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.cart-item-info p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Add responsiveness and further styling as required */
+/* Add to your existing CSS */
+
+.remove-item-btn {
+  padding: 8px 16px;
+  background-color: #ff4d4d; /* Red color for remove button */
+  color: white;
+  border: none;
+  border-radius
+: 4px;
+cursor: pointer;
+transition: background-color 0.2s;
+}
+
+.remove-item-btn:hover {
+background-color: #ff3333; /* Slightly darker red on hover */
+}
