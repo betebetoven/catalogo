@@ -41,7 +41,7 @@ const removeFromCart = (itemId, size, color) => {
           ))}
         </ul>
       ) : (
-        <p>Your cart is empty.</p>
+        <p>Tu carrito esta vacio :( visita nuestro productos para ver su variedad.</p>
       )}
         <h3>Total: ${total}</h3>
     </div>
