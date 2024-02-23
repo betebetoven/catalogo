@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { getDoc, doc } from 'firebase/firestore';
 import firestore from '../firebase';
 import ProductCard from './ProductCardCarrito';
+import Makepurchase from '../pedido/makepurchase';
 
 function Carrito() {
   const [cartItems, setCartItems] = useState([]);
@@ -27,6 +28,18 @@ const removeFromCart = (itemId, size, color) => {
     localStorage.setItem('cart', JSON.stringify(storedCartItems));
     setCartItems(storedCartItems);
 };
+function formatProductDetailsForWhatsApp(product, size, color) {
+    let details = `Product: ${product.nombre}\n`;
+    details += `Category: ${product.categoria}\n`;
+    details += `Price: $${product.precio}\n`;
+    details += `Size: ${size}\n`;
+    details += `Color: ${color}\n`;
+    details += `Id: ${product.id}\n`;
+    return details;
+}
+function formatcartItemsForWhatsApp(cartItems) {
+    return cartItems.map(item => formatProductDetailsForWhatsApp(item, item.size2, item.color2)).join('\n');
+}
 
   return (
     <div className="carrito-container">
@@ -44,6 +57,7 @@ const removeFromCart = (itemId, size, color) => {
         <p>Tu carrito esta vacio :( visita nuestro productos para ver su variedad.</p>
       )}
         <h3>Total: ${total}</h3>
+        <Makepurchase text={formatcartItemsForWhatsApp(cartItems)} />
     </div>
   );
 }
