@@ -55,7 +55,7 @@ function ProductDetailPage() {
         <p className="product-meta">Price: ${product.precio}</p>
         <p className="product-meta">Description: {product.description}</p>
 
-        <label htmlFor="size-select" className="product-meta">Choose Size:</label>
+        <label htmlFor="size-select" className="product-meta">Tamaño:</label>
 <select id="size-select" className="product-select" value={selectedSize} onChange={handleSizeChange}>
   <option disabled value="">{selectedSize ? selectedSize : "Select Size"}</option>
   {product.size.map((size) => (
@@ -63,7 +63,7 @@ function ProductDetailPage() {
   ))}
 </select>
 
-<label htmlFor="color-select" className="product-meta">Choose Color:</label>
+<label htmlFor="color-select" className="product-meta">Sabor:</label>
 <select id="color-select" className="product-select" value={selectedColor} onChange={handleColorChange}>
   <option disabled value="">{selectedColor ? selectedColor : "Select Color"}</option>
   {product.color.map((color) => (

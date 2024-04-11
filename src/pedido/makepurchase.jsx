@@ -4,7 +4,7 @@ const Makepurchase = ({ text }) => {
     //the text comes with br tags from html and we need thetext for whatsapp without them
     
     const encodedText = encodeURIComponent(text);
-    const phoneNumber = '50246045383'; 
+    const phoneNumber = '50254585156'; 
     const whatsAppURL = `https://wa.me/${phoneNumber}?text=${encodedText}`;
     //console.log("Text to share:", text);
 
