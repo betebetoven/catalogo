@@ -29,7 +29,7 @@ function ProductDetailPage() {
     details += `Price: $${product.precio}\n`;
     details += `Description: ${product.description}\n`;
     details += `Size: ${size}\n`;
-    details += `Color: ${color}\n`;
+    details += `Sabor: ${color}\n`;
     details += `Id: ${product.id}\n`;
     return details;
   }

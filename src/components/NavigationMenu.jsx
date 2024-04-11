@@ -17,10 +17,10 @@ function NavigationMenu() {
       {isOpen && (
         <div className="menu-list">
           <Link to="/mens-clothing" className="menu-item" onClick={toggleMenu}>
-            Men's Clothing
+            Dulce
           </Link>
           <Link to="/womens-clothing" className="menu-item" onClick={toggleMenu}>
-            Women's Clothing
+            Salado
           </Link>
           <Link to="/carrito" className="menu-item" onClick={toggleMenu}>
             Carrito
