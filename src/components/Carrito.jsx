@@ -56,7 +56,7 @@ function formatcartItemsForWhatsApp(cartItems) {
       ) : (
         <p>Tu carrito esta vacio :( visita nuestro productos para ver su variedad.</p>
       )}
-        <h3>Total: ${total}</h3>
+        <h3>Total: Q{total}</h3>
         <Makepurchase text={formatcartItemsForWhatsApp(cartItems)} />
     </div>
   );

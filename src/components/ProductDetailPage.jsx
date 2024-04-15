@@ -52,7 +52,7 @@ function ProductDetailPage() {
       <div className="product-info">
         <h2 className="product-title">{product.nombre}</h2>
         <p className="product-meta">Category: {product.categoria}</p>
-        <p className="product-meta">Price: ${product.precio}</p>
+        <p className="product-meta">Price: Q{product.precio}</p>
         <p className="product-meta">Description: {product.description}</p>
 
         <label htmlFor="size-select" className="product-meta">Tamaño:</label>

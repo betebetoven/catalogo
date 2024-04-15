@@ -12,7 +12,7 @@ function ProductCard({ product }) {
           className="product-image" // Apply the class here
         />
         <h3>{product.nombre}</h3>
-        <p>${product.precio}</p>
+        <p>Q{product.precio}</p>
         </Link>
         {/* Implement WhatsApp redirection here */}
       </div>
